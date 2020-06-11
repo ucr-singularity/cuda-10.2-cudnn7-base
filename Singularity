@@ -35,6 +35,9 @@ From: nvidia/cuda:10.2-cudnn7-devel-ubuntu18.04
     find /opt/conda/ -follow -type f -name '*.js.map' -delete
     /opt/conda/bin/conda clean -afy
 
+    # Install packages
+    /opt/conda/bin/conda install -y -c pytorch pytorch
+
     # Clean up
     apt-get -y autoremove
     rm -rvf /var/lib/apt/lists/*
