@@ -2,9 +2,11 @@ Bootstrap: docker
 From: nvidia/cuda:10.2-cudnn7-devel-ubuntu18.04
 
 %environment
+
     LANG=C.UTF-8 
     LC_ALL=C.UTF-8 
     PATH=/opt/conda/bin:$PATH
+    CONDA_PKGS_DIRS=$HOME/.conda/pkgs
     
 %post
 
